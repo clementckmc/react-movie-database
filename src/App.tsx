@@ -1,9 +1,13 @@
-import './App.css'
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { IndexPage } from './pages/IndexPage/container';
 
 function App() {
   return (
-    <div>
-      <h1>Movie Database</h1>
+    <div className='App'>
+      <Routes>
+        <Route path="/react-movie-database" element={<IndexPage />}></Route>
+      </Routes>
     </div>
   )
 }
