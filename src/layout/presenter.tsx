@@ -8,11 +8,12 @@ type Props = {
 export const LayoutPresenter: React.FC<Props> = ({children}) => {
   return (
     <>
-      <Navbar className="bg-body-tertiary">
+      <Navbar fixed="top">
         <Container>
           <Navbar.Brand>Movie Database</Navbar.Brand>
         </Container>
       </Navbar>
+      <Container>{children}</Container>
     </>
   )
 }

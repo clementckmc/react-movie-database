@@ -1,8 +1,10 @@
+import { Container } from "react-bootstrap"
+
 export const IndexPagePresenter: React.FC = () => {
   return (
-    <>
-      <h2>Trending</h2>
-      <p>Search Bar</p>
-    </>
+      <Container>
+        <h2>Trending</h2>
+        <p>Search Bar</p>
+      </Container>
   )
 }
