@@ -16,7 +16,7 @@ export const IndexPage: React.FC = () => {
       }
     }
     ).then((response: AxiosResponse) => {
-      setMovieDtos(response.data.results)
+      setMovieDtos(response.data.results.slice(0, 4))
     })
   })
 

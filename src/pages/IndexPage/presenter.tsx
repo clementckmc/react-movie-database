@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 import { SearchBar } from "../../components/SearchBar/container"
 import { MovieCard } from "../../components/MovieCard/container"
 import { MovieDto } from "../../types/MovieDto"
@@ -15,14 +15,14 @@ export const IndexPagePresenter = ({
         <h2>Trending</h2>
         {
           movieDtos && movieDtos.length > 0 ?
-          <>
+          <Row>
             {movieDtos.map((movieDto: MovieDto) => (
               <MovieCard 
                 key={movieDto.id}
                 movieDto={movieDto}
               />
             ))}
-          </> :
+          </Row> :
           <h3>No movies found</h3>
         }
         <SearchBar />
