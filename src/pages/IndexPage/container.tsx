@@ -9,7 +9,13 @@ export const IndexPage: React.FC = () => {
   const [movieDtos, setMovieDtos] = useState<MovieDto[]>();
 
   useEffect(() => {
-    axios.get("https://api.themoviedb.org/3/trending/movie/day").then((response: AxiosResponse) => {
+    axios.get("https://api.themoviedb.org/3/trending/movie/day", {
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${import.meta.env.VITE_TMDB_ACCESS_TOKEN}`
+      }
+    }
+    ).then((response: AxiosResponse) => {
       setMovieDtos(response.data.results)
     })
   })
