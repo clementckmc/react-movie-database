@@ -9,7 +9,7 @@ export const MovieCardPresenter: React.FC<Props> = ({
   movieDto
 }: Props) => {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '18rem' }} className="mx-1 mb-4">
       <Card.Img variant="top" src={noImage} alt="No Image Found" />
       <Card.Body>
         <Card.Title>{movieDto.title}</Card.Title>
