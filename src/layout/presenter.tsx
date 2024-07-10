@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { SearchBar } from '../components/SearchBar/container';
 
 type Props = {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ export const LayoutPresenter: React.FC<Props> = ({children}) => {
               Movie Database
             </Link>
           </Navbar.Brand>
+          <SearchBar />
         </Container>
       </Navbar>
       <Container>{children}</Container>

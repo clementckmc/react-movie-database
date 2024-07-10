@@ -1,5 +1,4 @@
 import { Container, Row } from "react-bootstrap"
-import { SearchBar } from "../../components/SearchBar/container"
 import { MovieCard } from "../../components/MovieCard/container"
 import { MovieDto } from "../../types/MovieDto"
 
@@ -25,7 +24,6 @@ export const IndexPagePresenter = ({
           </Row> :
           <h3>No movies found</h3>
         }
-        <SearchBar />
       </Container>
   )
 }
