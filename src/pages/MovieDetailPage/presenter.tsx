@@ -1,4 +1,4 @@
-import { Container, Stack } from "react-bootstrap"
+import { Badge, Container, Stack } from "react-bootstrap"
 import { MovieDetailDto } from "../../types/MovieDetailDto"
 import noImage from "../../assets/no_image.jpg";
 import { imageURL } from "../../common/urls";
@@ -23,7 +23,9 @@ export const MovieDetailPagePresenter = ({
               <p><i>{movieDetailDto.overview}</i></p>
               <p><strong>Release Date:</strong> {movieDetailDto.release_date}</p>
               <p><strong>Runtime:</strong> {movieDetailDto.runtime} minutes</p>
-              <p>Genres: {movieDetailDto.genres.map(genre => genre.name).join(", ")}</p>
+              <h4>
+                {movieDetailDto.genres.map(genre => <Badge bg="info" pill={true} className="genre-badge">{genre.name}</Badge>)}
+              </h4>
             </div>
           </Stack> :
           <h2>No movie found</h2>
