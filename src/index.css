@@ -62,6 +62,15 @@ button:focus-visible {
   margin: 4px;
 }
 
+.movie-card {
+  transition: 0.25s;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  border-color: black;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
