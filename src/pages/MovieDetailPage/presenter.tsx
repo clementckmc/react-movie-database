@@ -1,4 +1,4 @@
-import { Badge, Container, Stack } from "react-bootstrap"
+import { Badge, Button, Container, Stack } from "react-bootstrap"
 import { MovieDetailDto } from "../../types/MovieDetailDto"
 import noImage from "../../assets/no_image.jpg";
 import { imageURL } from "../../common/urls";
@@ -30,6 +30,9 @@ export const MovieDetailPagePresenter = ({
           </Stack> :
           <h2>No movie found</h2>
         }
+        <Button href="/react-movie-database" variant="secondary" className="mt-3" style={{textAlign: "left"}}>
+          <i className="bi bi-arrow-return-left"></i> Back to Home
+        </Button>
       </Container>
   )
 }

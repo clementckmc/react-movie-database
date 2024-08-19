@@ -11,7 +11,7 @@ export const IndexPagePresenter = ({
 }: Props) => {
   return (
       <Container>
-        <h2>Trending</h2>
+        <h2 style={{ textAlign: "center" }}>Trending</h2>
         {
           movieDtos && movieDtos.length > 0 ?
           <Row>
