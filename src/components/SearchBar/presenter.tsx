@@ -1,6 +1,16 @@
 import { Button, Dropdown, Form, InputGroup } from "react-bootstrap"
 
-export const SearchBarPresenter: React.FC = () => {
+type Props = {
+  searchText: string
+  onChangeSearchText: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
+  onSearchMovie: (searchText: string) => void
+}
+
+export const SearchBarPresenter: React.FC<Props> = ({
+  searchText,
+  onChangeSearchText,
+  onSearchMovie,
+}) => {
   return (
     <InputGroup className="mb-1">
       <Dropdown>
@@ -17,8 +27,10 @@ export const SearchBarPresenter: React.FC = () => {
       <Form.Control
         placeholder="Type a movie name to search..."
         aria-label="Search Movie By Name"
+        value={searchText}
+        onChange={onChangeSearchText}
       />
-      <Button variant="outline-secondary" id="button-addon2">
+      <Button variant="outline-secondary" id="button-addon2" onClick={() => onSearchMovie(searchText)}>
         <i className="bi bi-search"></i>
       </Button>
     </InputGroup>
