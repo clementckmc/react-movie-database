@@ -2,7 +2,7 @@ import { Button, Dropdown, Form, InputGroup } from "react-bootstrap"
 
 export const SearchBarPresenter: React.FC = () => {
   return (
-    <InputGroup className="mb-3">
+    <InputGroup className="mb-1">
       <Dropdown>
         <Dropdown.Toggle variant="secondary" id="dropdown-basic">
           English

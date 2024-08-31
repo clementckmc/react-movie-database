@@ -20,7 +20,7 @@ export const LayoutPresenter: React.FC<Props> = ({children}) => {
           <SearchBar />
         </Container>
       </Navbar>
-      <Container>{children}</Container>
+      <Container className="mt-3">{children}</Container>
     </>
   )
 }
