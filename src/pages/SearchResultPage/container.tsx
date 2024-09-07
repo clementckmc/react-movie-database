@@ -28,6 +28,7 @@ export const SearchResultPage: React.FC = () => {
     <Layout>
       <SearchResultPagePresenter
         movieDtos={movieDtos}
+        query={q}
       />
     </Layout>
   );

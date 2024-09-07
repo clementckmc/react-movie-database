@@ -4,14 +4,16 @@ import { MovieDto } from "../../types/MovieDto"
 
 type Props = {
   movieDtos?: MovieDto[]
+  query: string
 }
 
 export const SearchResultPagePresenter = ({
-  movieDtos
+  movieDtos,
+  query
 }: Props) => {
   return (
       <Container>
-        <h2 style={{ textAlign: "center" }}>Search Results</h2>
+        <h2 style={{ textAlign: "center" }}>Search Results for "{query}"</h2>
         {
           movieDtos && movieDtos.length > 0 ?
           <Row>
