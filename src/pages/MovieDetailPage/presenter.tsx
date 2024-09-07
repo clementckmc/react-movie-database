@@ -31,7 +31,7 @@ export const MovieDetailPagePresenter = ({
               </h4>
             </div>
           </Stack> :
-          <h2>No movie found</h2>
+          <h2>No movies found</h2>
         }
         <Button onClick={() => navigate(-1)} variant="secondary" className="mt-3" style={{textAlign: "left"}}>
           <i className="bi bi-arrow-return-left"></i> Previous Page

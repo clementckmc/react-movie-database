@@ -6,7 +6,7 @@ import { MovieDto } from "../../types/MovieDto";
 
 export const IndexPage: React.FC = () => {
 
-  const [movieDtos, setMovieDtos] = useState<MovieDto[]>();
+  const [movieDtos, setMovieDtos] = useState<MovieDto[]>([]);
 
   useEffect(() => {
     axios.get("https://api.themoviedb.org/3/trending/movie/day", {

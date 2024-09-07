@@ -7,7 +7,7 @@ import { useSearchParams } from "react-router-dom";
 
 export const SearchResultPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [movieDtos, setMovieDtos] = useState<MovieDto[]>();
+  const [movieDtos, setMovieDtos] = useState<MovieDto[]>([]);
 
   const q = searchParams.get("q") || "";
   const lang = searchParams.get("lang") || "en-US";

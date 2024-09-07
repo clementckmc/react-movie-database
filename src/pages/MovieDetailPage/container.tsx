@@ -21,7 +21,6 @@ export const MovieDetailPage: React.FC = () => {
     })
   })
 
-
   return (
     <Layout>
       <MovieDetailPagePresenter movieDetailDto={movieDetailDto} />
