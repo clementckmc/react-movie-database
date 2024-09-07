@@ -13,7 +13,7 @@ export const SearchResultPagePresenter = ({
 }: Props) => {
   return (
       <Container>
-        <h2 style={{ textAlign: "center" }}>Search Results for "{query}"</h2>
+        <h2 style={{ textAlign: "center" }}>Top Search Results for "{query}"</h2>
         {
           movieDtos && movieDtos.length > 0 ?
           <Row>
