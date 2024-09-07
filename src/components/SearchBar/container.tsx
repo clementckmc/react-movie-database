@@ -15,7 +15,7 @@ export const SearchBar: React.FC = ({}) => {
   };
 
   const onSearchMovie = (searchText: string) => {
-    navigate(`/react-movie-database/search/q=${searchText}`)
+    navigate({ pathname: '/react-movie-database/results', search: `?q=${searchText}&lang=en-US` })
   }
 
   return (
