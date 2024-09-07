@@ -30,8 +30,8 @@ export const SearchBarPresenter: React.FC<Props> = ({
 
         <Dropdown.Menu>
           <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('en-US') }}>English</Dropdown.Item>
-          <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('ja-JP') }}>Japanese</Dropdown.Item>
-          <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('es-ES') }}>Spanish</Dropdown.Item>
+          <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('ja') }}>Japanese</Dropdown.Item>
+          <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('es') }}>Spanish</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
       <Form.Control
