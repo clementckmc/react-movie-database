@@ -1,3 +1,9 @@
+# Movie Database
+- App Homepage: https://clementckmc.github.io/react-movie-database/
+- Web app built with React + TypeScript + Vite
+- Movie data fetched from [TMDB](https://developer.themoviedb.org/docs/getting-started)
+- To locally host this app: run `npm run dev`
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
