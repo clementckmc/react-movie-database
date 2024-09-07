@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Button, Dropdown, Form, InputGroup } from "react-bootstrap"
 
 type Props = {
@@ -13,17 +14,24 @@ export const SearchBarPresenter: React.FC<Props> = ({
   onSearchMovie,
   onSelectLanguage
 }) => {
+  const [selectedLanguage, setSelectedLanguage] = useState('English');
+
+  const handleLanguageDropdown = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const newLanguage = event.currentTarget.innerText;
+    setSelectedLanguage(newLanguage);
+  };
+
   return (
     <InputGroup className="mb-1">
       <Dropdown>
         <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-          English
+          {selectedLanguage}
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => onSelectLanguage('en-US')}>English</Dropdown.Item>
-          <Dropdown.Item onClick={() => onSelectLanguage('ja-JP')}>Japanese</Dropdown.Item>
-          <Dropdown.Item onClick={() => onSelectLanguage('es-ES')}>Spanish</Dropdown.Item>
+          <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('en-US') }}>English</Dropdown.Item>
+          <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('ja-JP') }}>Japanese</Dropdown.Item>
+          <Dropdown.Item onClick={(e) => { handleLanguageDropdown(e as React.MouseEvent<HTMLButtonElement>); onSelectLanguage('es-ES') }}>Spanish</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
       <Form.Control
