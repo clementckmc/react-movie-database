@@ -6,7 +6,7 @@ type Props = {
   movieDtos?: MovieDto[]
 }
 
-export const SearchResultPagePresenter: React.FC = ({
+export const SearchResultPagePresenter = ({
   movieDtos
 }: Props) => {
   return (
