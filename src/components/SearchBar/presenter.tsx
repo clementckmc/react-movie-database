@@ -21,6 +21,12 @@ export const SearchBarPresenter: React.FC<Props> = ({
     setSelectedLanguage(newLanguage);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      onSearchMovie(searchText);
+    }
+  };
+
   return (
     <InputGroup className="mb-1">
       <Dropdown>
@@ -39,6 +45,7 @@ export const SearchBarPresenter: React.FC<Props> = ({
         aria-label="Search Movie By Name"
         value={searchText}
         onChange={onChangeSearchText}
+        onKeyDown={handleKeyDown}
       />
       <Button variant="outline-secondary" id="button-addon2" onClick={() => onSearchMovie(searchText)}>
         <i className="bi bi-search"></i>
